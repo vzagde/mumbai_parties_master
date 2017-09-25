@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui"> -->
+      <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-status-bar-style" content="black">
+      <meta name="format-detection" content="telephone=no">
+      <meta name="msapplication-tap-highlight" content="no">
+      <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+      <title>Mumbai Partie</title>
+      <link rel="stylesheet" href="css/icon.css" >
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css" media="screen" />
+      <link rel="stylesheet" href="lib/framework7/css/framework7.ios.min.css">
+      <link rel="stylesheet" href="lib/framework7/css/framework7.ios.colors.min.css">
+      <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+      <link rel="stylesheet" type="text/css" href="css/owl.theme.min.css">
+      <link rel="stylesheet" href="css/styles.css">
+
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlqpmD2l9INTUVzyhXo9nIxaLrgF7jRAg"></script>
+      <script type="text/javascript" src="js/markerwithlabel.js"></script>
+
+   </head>
+   <body>
+
+<!-- // events.event_start_date < '04-02-2015' and 
+// SELECT * FROM events join entities on events.entity_id = entities.id join eventtype_copy on events.event_type=eventtype_copy.id where events.event_type=1 and entities.location = 1 and '2016/05/22' between STR_TO_DATE(events.event_start_date,"%m/%d/%Y")  and STR_TO_DATE(events.event_end_date,"%m/%d/%Y")
+
+ -->
+      <!-- <div class="statusbar-overlay"></div>
+         <!--Panels overlay-->
+      <div class="panel-overlay"></div>
+      <!-- Left panel with reveal effect-->
+      <div class="panel panel-left panel-cover">
+         <div class="content-block no-mar no-pad">
+            <div class="row drawer-row">
+               <div class="col-50" style="position:relative">
+                  <!-- open-picker close-panel -->
+                  <!-- data-picker=".update_picker" class="" -->
+                  <!-- <a id="profile_picker" href="#"> -->
+                  <!-- http://casaestilo.in/taha/mp_admin/uploads -->
+                  <!--  -->
+                  <img id="profile_img" onclick="" class="img-circle" width="90px" src="http://casaestilo.in/taha/mp_admin/uploads/profile_pic/user.jpeg" alt="no img">
+                  <!-- <i id="camera-icon" style="display:none" class="fa fa-camera profile-overlay" aria-hidden="true"></i> -->
+                  <!-- </a> -->
+               </div>
+               <div class="col-50" id="signin-div">
+               
+                  <a href="login.html" class="close-panel">
+                     <h2 class="username">Sign in</h2>
+                  </a>
+               </div>
+            </div>
+            <div class="list-block no-mar">
+               <ul class="drawer-nav">
+                  <!--  <li>
+                     <a href="#" class="item-link item-content">
+                       <div class="item-inner cust-menu">
+                         <div class="item-title">My Account</div>
+                       </div>
+                     </a>
+                     </li> -->
+                  <li id="wallet_div" style="display:none">
+                     <a href="mywallet.html" class="item-link item-content close-panel">
+                        <div class="item-inner cust-menu">
+                           <div class="item-title">My Wallet</div>
+                        </div>
+                     </a>
+                  </li>
+                  <!-- style="display:none" -->
+<!--                   <li id="booking_div">
+                     <a  href="mybooking.html" class="item-link item-content close-panel">
+                        <div class="item-inner cust-menu">
+                           <div class="item-title">My Bookings</div>
+                        </div>
+                     </a>
+                  </li> -->
+                  <li id="invite_div" style="display:none">
+                     <a href="invite.html" class="item-link item-content  close-panel">
+                        <div class="item-inner cust-menu">
+                           <div class="item-title">Refer & Earn</div>
+                        </div>
+                     </a>
+                  </li>
+                  <li id="redeem_div" style="display:none">
+                     <a href="redeem.html" class="item-link item-content  close-panel">
+                        <div class="item-inner cust-menu">
+                           <div class="item-title">Redeem</div>
+                        </div>
+                     </a>
+                  </li>
+                  <!-- <li>
+                     <a href="aboutus.html" class="item-link item-content close-panel">
+                       <div class="item-inner cust-menu">
+                         <div class="item-title">About Us</div>
+                       </div>
+                     </a>
+                     </li> -->
+                  <li>
+                     <a href="contactus.html" class="item-link item-content close-panel">
+                        <div class="item-inner cust-menu">
+                           <div class="item-title">Contact Us</div>
+                        </div>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="termscondition.html" class="item-link item-content close-panel">
+                        <div class="item-inner cust-menu">
+                           <div class="item-title">Terms and Conditions</div>
+                        </div>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="privacypolicy.html" class="item-link item-content close-panel">
+                        <div class="item-inner cust-menu">
+                           <div class="item-title">Privacy Policy</div>
+                        </div>
+                     </a>
+                  </li>
+                  <!-- <li>
+                     <a href="offline.html" class="item-link item-content  close-panel">
+                       <div class="item-inner cust-menu">
+                         <div class="item-title">offline</div>
+                       </div>
+                     </a>
+                     </li> -->
+                  <!-- <li id="invite_div" style="display:none">
+                     <a href="invite.html" class="item-link item-content  close-panel">
+                       <div class="item-inner cust-menu">
+                         <div class="item-title">Invite</div>
+                       </div>
+                     </a>
+                     </li> -->
+                  <li id="signout-div" style="display:none">
+                     <a href="#" id="signout" class="item-link item-content close-panel">
+                        <div class="item-inner cust-menu">
+                           <div class="item-title">Sign Out</div>
+                        </div>
+                     </a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <!--             <div class="popup popup-club" style="background:black">
+         <div class="navbar">
+            <div class="navbar-inner" style="background: url('img/topbg.png')">
+               <div class="left">
+                  <a href="#" class="close-popup" style="padding: 10px;">
+                     <img style="-ms-transform: rotate(-91deg);-webkit-transform: rotate(-91deg);transform: rotate(-91deg);margin-top: 10px;margin-left: 5px;"  src="img/leftarrow.png" width="13px">
+                  </a>
+               </div>
+               <div class="center sliding">
+                   <img style="width: 130px;" src="img/toplogo.png">
+               </div>
+               <div class="right">
+               </div>
+            </div>
+         </div>
+         <div class="content-block no-mar no-pad">
+           <div class="row no-gutter" id="event_box">
+              <div data-id="1" class='card demo-card-header-pic go_to_club_list close-popup'>
+                 <div style='background-image:url(img/card.jpg)' valign='bottom' class='card-header no-border'>
+                    <h3 class='no-mar list-name'>ALL CLUBS</h3>
+                 </div>
+              </div>
+              <div data-id="2" class='card demo-card-header-pic go_to_club_list close-popup'>
+                 <div style='background-image:url(img/card.jpg)' valign='bottom' class='card-header no-border'>
+                    <h3 class='no-mar list-name'>MOST POPULAR CLUBS</h3>
+                 </div>
+              </div>
+              <div data-id="3" class='card demo-card-header-pic go_to_club_list close-popup'>
+                 <div style='background-image:url(img/card.jpg)' valign='bottom' class='card-header no-border'>
+                    <h3 class='no-mar list-name'>WHATS NEW</h3>
+                 </div>
+              </div>
+           </div>
+         </div>
+         
+         </div> -->
+      <!-- Views -->
+      <div class="views">
+         <!-- Your main view, should have "view-main" class -->
+         <div class="view view-main">
+            <!-- Top Navbar-->
+            <!-- background: url('img/topbg.png') -->
+
+            <div class="navbar">
+               <div class="navbar-inner"  style="background:none!important">
+                  <div class="left">
+                  </div>
+                  <div class="center sliding" >
+                  </div>
+                  <div class="right">
+                  </div>
+               </div>
+            </div>
+
+            <div class="pages navbar-through toolbar-through">
+
+               <div data-page="index" class="page bg">
+                  <div class="page-content">
+                     <div class="content-block middle-text">
+                        <img src="img/logo.png" width="200px" style="margin-top:40px">
+                        <p class="buttons-row">
+                           <a href="login.html" class="button">SIGN IN TO PARTY</a>
+                           <img src="img/bottomline.png">
+                        </p>
+                        <!-- <p class="buttons-row"> -->
+                        <div class="fb-box">
+                           <img onclick="mylogin()" src="img/facebook.png" style="width: 100%;height: 45px;">
+                           <img class="fb-line" src="img/bottomline.png">
+                        </div>
+                        <!--   <a href="#" onclick="mylogin()" class="button">FACEBOOK CONNECT</a>
+                           <img src="img/bottomline.png"> -->
+                        <!-- </p> -->
+                        <!-- <p class="buttons-row">
+                           <a href="#"  class="button">FACEBOOK CONNECT</a>
+                                  <img src="img/bottomline.png">
+                           
+                           </p> -->
+                        <p class="buttons-row">
+                           <a href="register.html" class="button">NEW USER SIGNUP</a>
+                           <img src="img/bottomline.png">
+                        </p>
+                        <p class="buttons-row">
+                           <a href="type.html" class="button">SIGNUP LATER</a>
+                        </p>
+                     </div>
+                  </div>
+               </div>
+               <!--                 <div class="picker-modal update_picker" style="height:200px">
+                  <div class="toolbar" style="background-color: black;">
+                    <div class="toolbar-inner">
+                      <div class="left"></div>
+                      <div class="right"><a href="#" style="border:none" class="close-picker">Close</a></div>
+                    </div>
+                  </div>
+                  <div class="picker-modal-inner">
+                    <div class="content-block" style="margin:0">
+                         <div class="list-block" style="margin:0">
+                            <ul>
+                              <li onclick="update_type_camera()" class="item-content photo-type">
+                                <div class="item-media"></div>
+                                <div class="item-inner" style="margin: 0px;">
+                                  <div class="item-title" style="color:black">Camera</div>
+                                  <div class="item-after"></div>
+                                </div>
+                              </li>
+                              <li onclick="update_type_gallery()" class="item-content photo-type">
+                                <div class="item-media"></div>
+                                <div class="item-inner" style="margin: 0px;">
+                                  <div class="item-title"  style="color:black">Galleryy</div>
+                                  <div class="item-after"></div>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                    </div>
+                  </div>
+                  </div> -->
+            </div>
+
+
+
+            <!-- space for toolbar -->
+
+
+         </div>
+      </div>
+
+
+      <div id="fb-root"></div>
+      <script src="js/jquery-2.2.4.min.js"></script>
+      <!--     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCGxWQDpfQ2erARAl0RHwKkqfEDYq6rvU"
+         async defer></script>
+         <script src="js/markerwithlabel.js"></script> -->
+      <script type="text/javascript" src="cordova.js"></script>
+      <script type="text/javascript" src="js/script.js"></script>
+      <script type="text/javascript" src="lib/framework7/js/framework7.min.js"></script>
+      <script type="text/javascript" src="js/lockr.js"></script>
+      <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+      <script type="text/javascript" src="js/ajax.js"></script>
+      <script type="text/javascript" src="js/my-app.js"></script>
+      <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+      <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script> -->
+      <script src="js/checkout.js"></script>
+      <script type="text/javascript" src="js/moment.js"></script>
+      <script>
+         $(document).ready(function() {
+             $('.fancybox').fancybox();
+         });
+      </script>
+   </body>
+</html>

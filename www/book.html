@@ -1,0 +1,163 @@
+
+  <div class="navbar">
+   <div class="navbar-inner" style="background: url('img/topbg.png')">
+      <div class="left">
+         <a href="#" class="back link">
+            <!-- <i style="font-size:30px" class="material-icons">&#xE314;</i> -->
+            <img src="img/leftarrow.png" width="13px">
+            
+
+         </a>
+      </div>
+      <div class="center sliding">
+          <img style="width: 130px;" src="img/toplogo.png">
+            
+      </div>
+      <div class="right">
+      </div>
+   </div>
+</div>
+
+ <div data-page="book" class="page">
+    <div class="page-content" style="background-color:white">
+        <div class="content-block no-pad" style="background-color:black;padding: 5px 20px;">
+
+          <div class='card demo-card-header-pic' style='margin: 0;margin-bottom: 2px;width:100%'>
+            <div style='background-image:url(img/card.jpg)' valign='bottom' class='card-header no-border'>
+              <h3 class='no-mar list-name'>BLUE FROG</h3>
+            </div>
+          </div>
+
+
+          <div style="background-color:black;padding: 5px 20px;min-height: 500px;position: relative;">
+              <div class="row">
+                <div class="col-50">
+                   <p>Select Date :</p> 
+                </div>
+                <div class="col-50">
+                   <!-- <input style="height: 25px;width: 100%;" type="date" name="date"> -->
+
+                  <span class="book-date-text">12th Sept</span>
+
+                  <i class="fa fa-calendar fa-2x book-calender" aria-hidden="true"></i>
+                  <!-- <input id="date" onchange="changedate()" class="book-date" type="date"> -->
+                </div>
+
+              </div>
+
+              <div class="row">
+                  <div class="col-50">
+                    <p>Stag Entry</p>
+                  </div>
+                  <div class="col-20">
+                    <p id="single_text">0</p>
+                  </div>
+                  <div class="col-30">
+                    <p>
+                      <div class="input-prepend-append">
+                        <button id="dec_single" onclick="dec_single()"  type="button" class="btn btn-prepend" disabled="true"> - </button>
+                        <!-- <input type="number" min="0" max="5" id="number_passengers" value="1"> -->
+                        <button onclick="inc_single()" type="button" class="btn btn-append"> + </button>
+                      </div>
+                    </p>
+                    
+                  </div>
+              </div>
+
+              <div class="row single-textbox">
+              </div>
+
+              <div class="row">
+                  <div class="col-50">
+                    <p>Couple Entry</p>
+                  </div>
+                  <div class="col-20">
+                    <p id="couple_text">0</p>
+                  </div>
+                  <div class="col-30">
+                    <p>
+                      <div class="input-prepend-append">
+                        <button id="dec_couple" onclick="dec_couple()" type="button" class="btn btn-prepend" disabled> - </button>
+                        <!-- <input type="number" min="0" max="5" id="number_passengers" value="1"> -->
+                        <button onclick="inc_couple()" type="button" class="btn btn-append"> + </button>
+                      </div>
+                    </p>
+                    
+                  </div>
+              </div>
+
+              <div class="row couple-textbox">
+              </div>
+
+             <!--  <div class="row">
+                  <div class="col-50">
+                    <p>Table Entry For</p>
+                  </div>
+                  <div class="col-20">
+                    <p id="table_text">0</p>
+                  </div>
+                  <div class="col-30">
+                    <p>
+                      <div class="input-prepend-append">
+                        <button id="dec_table" onclick="dec_table()" type="button" class="btn btn-prepend" disabled> - </button>
+                        <button onclick="inc_table()" type="button" class="btn btn-append"> + </button>
+                      </div>
+                    </p>
+                  </div>
+              </div> -->
+
+              <div style="display:flex">
+                <h3>Total = </h3>&nbsp
+                <h3 id="amount">0</h3>
+                <h3>/-</h3>                
+              </div>
+
+
+  
+              <a href=''>
+                <input id="rzp-button1" class='buy-btn' type='submit' value='PAY' style="margin-bottom: 30px; ">
+              </a>
+              <br>
+              <br>
+
+
+          </div>
+        </div>
+       
+    </div>
+   <div class="toolbar" style="text-align:center">
+      <div class="toolbar-inner">
+
+          <!-- class="home back" -->
+          <a class="home" href="#">
+            <i class="material-icons">&#xE88A;</i>
+            <p class="tool-text no-mar">HOME</p>
+          </a>
+
+<!--           <a href="club_types.html">
+            <i class="material-icons">&#xE147;</i>
+            <p class="tool-text no-mar">CLUBS</p>
+          </a> -->
+          <a href="club_types.html" >
+            <i class="material-icons">&#xE147;</i>
+            <p class="tool-text no-mar">CLUBS</p>
+          </a>
+
+          <a class='notify-toolbar' href="#">
+            <i class="material-icons">&#xE7F4;</i>
+            <p class="tool-text no-mar">NOTIFY</p>
+          </a>
+
+          <a href="search.html">
+            <i class="material-icons">&#xE8B6;</i>
+            <p class="tool-text no-mar">SEARCH</p>
+          </a>
+          
+<!--           <a href="#" style="border:0">
+            <i class="material-icons">&#xE7F4;</i>
+            <p class="tool-text no-mar">ALERTS</p>
+          </a> -->
+      </div>
+  </div>
+ </div>
+

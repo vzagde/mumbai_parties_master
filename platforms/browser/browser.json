@@ -1,0 +1,48 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.mumbaiparties.mumbaiparties"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.mumbaiparties.mumbaiparties"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.mumbaiparties.mumbaiparties"
+        },
+        "cordova-plugin-social-message": {
+            "PACKAGE_NAME": "com.mumbaiparties.mumbaiparties"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
+            "id": "cordova-plugin-statusbar.statusbar",
+            "pluginId": "cordova-plugin-statusbar",
+            "clobbers": [
+                "window.StatusBar"
+            ]
+        },
+        {
+            "file": "plugins/cordova-plugin-social-message/www/socialmessage.js",
+            "id": "cordova-plugin-social-message.SocialMessage",
+            "pluginId": "cordova-plugin-social-message",
+            "clobbers": [
+                "socialmessage"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-plugin-console": "1.0.3",
+        "cordova-plugin-statusbar": "1.0.1",
+        "cordova-plugin-whitelist": "1.2.2",
+        "cordova-plugin-social-message": "0.4.0"
+    }
+}
