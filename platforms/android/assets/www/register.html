@@ -1,0 +1,114 @@
+<!-- We don't need a full layout in this file because this page will be parsed with Ajax. -->
+<!-- Top Navbar-->
+<div class="navbar">
+   <div class="navbar-inner" style="background:none">
+      <div class="left">
+         <a href="#" class="back link">
+            <!-- <i style="font-size:30px" class="material-icons">&#xE314;</i> -->
+            <img src="img/leftarrow.png" width="13px">
+         </a>
+      </div>
+      <div class="center sliding">
+         <!-- slide -->
+      </div>
+      <div class="right">
+         <!-- <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a> -->
+      </div>
+   </div>
+</div>
+<div data-page="register" class="page" style="background:url(img/bg.png); background-size: 100% 100%;">
+   <div class="page-content">
+      <div class="content-block middle-text"  >
+         <div class="list-block" style="margin:0">
+            <img style="width:50%" src="img/logo.png" width="200px">
+            <!-- <img src="img/logo.png" width="150px">             -->
+            <form id="register_form" action="#" method="#" accept-charset="utf-8">
+               <div class="reg-input">
+                  <input class="transparent-input" name="name" type="text" placeholder="Name">
+                  <i class="fa fa-user icon-font" aria-hidden="true"></i>
+               </div>
+               <div class="reg-input">
+                  <input class="transparent-input" name="email" id="email" type="email" placeholder="Email">
+                  <i class="fa fa-envelope icon-font" aria-hidden="true"></i>
+               </div>
+               <div class="reg-input">
+                  <i class="fa fa-lock icon-font" aria-hidden="true"></i>
+                  <input class="transparent-input" name="password" type="password" placeholder="Password">
+               </div>
+               <div class="reg-input">
+                  <input class="transparent-input" name="confirm_password" type="password" placeholder="Conform Password">
+                  <i class="fa fa-lock icon-font" aria-hidden="true"></i>
+               </div>
+               <div class="reg-input">
+                  <input class="transparent-input" id="age" name="age" onblur="check_age(this.id)" type="text" placeholder="Age">
+                  <i class="fa fa-calendar-o icon-font" aria-hidden="true"></i>
+               </div>
+               <div class="row reg-input cust-radio">
+                  <!--              <label for="r1"> button one</label>
+                     <input type="radio" name="group1" id="r1" value="1" /> -->
+                  <label for="radio1">Male</label>
+                  <input type='radio' name="gender" value='Male' id='radio1'/>
+                  <label for="radio2">Female</label>
+                  <input type='radio' name="gender" value='Female'  id='radio2'/>                    
+               </div>
+               <div class="reg-input">
+                  <input class="transparent-input" id='mobile' name="mobile" type="text" onblur="check_mobile(this.id)" placeholder="Mobile Number">
+                  <i style="font-size: xx-large;" class="fa fa-mobile icon-font" aria-hidden="true"></i>
+               </div>
+               <!-- id='profile_picker' -->
+               <!-- data-picker=".upload_picker" class="open-picker" -->
+
+               <a href="#" style="position: relative;">
+                  <!-- &nbsp &nbsp Upload a Photo -->
+                  <!-- <button class="upload_buttom" onclick="prompt_upload()">
+                     <p class="upload-para"><i class="fa fa-upload fa-2x" aria-hidden="true"></i></p>
+                  </button> -->
+                  <img src="img/upload.png" style="position: absolute;left: 15px;width: 25px;top: -3px;">
+                  <input  onclick="prompt_upload()" class="upload-btn" type="submit" value="Profile Image">
+               </a>
+               <br>
+               <!-- <div class="reg-input" style="text-align: center;">
+                  <input type="checkbox" name="check">
+                  <span style="font-size:14px">I am above 18 years of age and accept the terms and consitions</span>
+               </div> -->
+               <a href="#" >
+               </a>
+               <!-- <input name="profile" type="file"><br> -->
+               <div class="mybtn">
+                  <a href="#" id="register_button" class="button">Sign Up</a>
+               </div>
+            </form>
+         </div>
+      </div>
+   </div>
+   <!--    <div class="picker-modal upload_picker" style="position:fixed;bottom:0;height:200px">
+      <div class="toolbar" style="background-color: black;">
+        <div class="toolbar-inner">
+          <div class="left"></div>
+          <div class="right"><a href="#" style="border:none" class="close-picker">Close</a></div>
+        </div>
+      </div>
+      <div class="picker-modal-inner">
+        <div class="content-block" style="margin:0">
+             <div class="list-block" style="margin:0">
+                <ul>
+                  <li onclick="upload_type_camera()" class="item-content photo-type">
+                    <div class="item-media"></div>
+                    <div class="item-inner" style="margin: 0px;">
+                      <div class="item-title" style="color:black">Camera</div>
+                      <div class="item-after"></div>
+                    </div>
+                  </li>
+                  <li onclick="upload_type_gallery()" class="item-content photo-type">
+                    <div class="item-media"></div>
+                    <div class="item-inner" style="margin: 0px;">
+                      <div class="item-title"  style="color:black">Galleryy</div>
+                      <div class="item-after"></div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+        </div>
+      </div>
+      </div> -->
+</div>
